@@ -1,0 +1,36 @@
+﻿In this video we will cover the “Dining Philosophers” problem. 
+
+
+The “Dining Philosophers” problem is an example problem to demonstrate concurrent algorithm design. 
+
+
+A group of philosophers sit around a table and alternate between thinking and eating using the forks on their left and right. The forks represent a shared resource between the pair of philosophers on either side of them. Philosophers need both forks to eat and only one philosopher can use a fork at a time. 
+
+
+If the philosophers were to simply take forks as they needed them a situation could occur where a circle of philosophers are each holding one fork and waiting on another philosopher to give up a fork. This is referred to as a “deadlock”.
+
+
+A simple solution to this problem is to add a waiter, who represents a lock, that the philosophers need exclusive access to before picking up either of their forks. Once a philosopher has exclusive access to the waiter’s attention they have that attention until the philosopher has successfully picked up both forks. When a philosopher has exclusive access to the waiter they will succeed in picking up their forks either because both forks are available, and no other philosophers have the waiter's attention, or they will wait with the waiter’s attention for the philosophers on either side of them to give up their forks. 
+
+
+This solution of using a central arbitrator to manage access prevents a circular cycle of philosophers holding one fork while waiting on another philosopher for their other fork that causes a deadlock. This solution is fair because all of the philosophers have equal access to the waiter. However, it can be inefficient because philosophers have to wait for the waiter even when both of their forks are available. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Reference:
+Dining philosophers image: bdesham - https://commons.wikimedia.org/wiki/File:An_illustration_of_the_dining_philosophers_problem.png
